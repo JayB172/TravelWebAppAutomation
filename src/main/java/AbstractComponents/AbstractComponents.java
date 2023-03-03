@@ -3,6 +3,7 @@ package AbstractComponents;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,5 +33,10 @@ public class AbstractComponents {
 		WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.invisibilityOf(elemt));
 		
+	}
+	
+	public void scroll() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,5000)");
 	}
 }

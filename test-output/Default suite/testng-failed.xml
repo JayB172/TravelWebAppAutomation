@@ -6,7 +6,7 @@
       <class name="Selenium_Demo.Travels_WebApp.MainTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="mainTest"/>
+          <include name="mainTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- Selenium_Demo.Travels_WebApp.MainTest -->
     </classes>

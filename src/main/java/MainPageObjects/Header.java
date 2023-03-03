@@ -38,7 +38,7 @@ public class Header extends AbstractComponents {
 		AccountBtn.click();
 	}
 	
-	public void selectSignUp() {
+	public void enterInvalidCredentials() {
 		clickAccBtn();
 		WebElement signUp = options.stream().filter((s) -> s.getText().equalsIgnoreCase("Customer Signup")).findFirst().orElse(null);
 		signUp.click();

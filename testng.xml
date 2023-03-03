@@ -3,14 +3,19 @@
 
 
 
-<suite name="Suite">
+<suite name="Suite" parallel="tests" >
 
  <listeners>
  <listener class-name="TestComponents.Listeners"/>
  </listeners>
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Test1">
     <classes>
       <class name="Selenium_Demo.Travels_WebApp.MainTest"/>
     </classes>
   </test> 
-</suite> 
+  <test thread-count="5" name="Test2">
+    <classes>
+      <class name="Selenium_Demo.Travels_WebApp.NegativeTest"/>
+    </classes>
+  </test> 
+</suite>  

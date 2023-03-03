@@ -37,6 +37,8 @@ public class FlightBookingPageObjects extends AbstractComponents {
 	@FindBy(css = "button[css='1']")
 	WebElement bookBtn;
 	
+	
+	
 	public void bookNewFlight() {
 		waitForWebElement(flightBtn);
 		flightBtn.click();

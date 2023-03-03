@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 02 09:09:10 IST 2023</td>
+<td>Started on:</td><td>Fri Mar 03 14:41:34 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16473 ms)</td>
+<tr><td>Total time:</td><td>51 seconds (51818 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Selenium_Demo.Travels_WebApp.MainTest.mainTest()'><b>mainTest</b><br>Test class: Selenium_Demo.Travels_WebApp.MainTest</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;active_... waves-effect&quot; href=&quot;https://phptravels.net/flights&quot; title=&quot;flights&quot;&gt;flights&lt;/a&gt; is not clickable at point (956, 35). Other element would receive the click: &lt;div class=&quot;preloader centerrotate&quot; id=&quot;preloader&quot; style=&quot;opacity: 0.984292;&quot;&gt;...&lt;/div&gt;
+<td title='Selenium_Demo.Travels_WebApp.MainTest.mainTest()'><b>mainTest</b><br>Test class: Selenium_Demo.Travels_WebApp.MainTest<br>Parameters: {password=abc789123, email=abc789@gmail.com}</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1075, 1307)
   (Session info: chrome=110.0.5481.177)
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;1.8.0_351&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f7e6053021cc2a340cddb625a1f80ee, clickElement {id=46b011f8-a31e-4e31-a1dd-b097cbd79fd9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/2p/nch_m4jn7px...}, goog:chromeOptions: {debuggerAddress: localhost:64085}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64085/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on MAC (0f7e6053021cc2a340cddb625a1f80ee)] -&gt; xpath: //a[text() = &apos;flights&apos;]]
-Session ID: 0f7e6053021cc2a340cddb625a1f80ee
+Command: [1df10a8022f9b6888a662edd737e0278, clickElement {id=65d72029-f354-4fca-8da5-e90629a7cc3f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/2p/nch_m4jn7px...}, goog:chromeOptions: {debuggerAddress: localhost:51035}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51035/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (1df10a8022f9b6888a662edd737e0278)] -&gt; xpath: (//label[@for=&apos;agreechb&apos;])[1]]
+Session ID: 1df10a8022f9b6888a662edd737e0278
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -103,11 +103,11 @@ Session ID: 0f7e6053021cc2a340cddb625a1f80ee
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at LogInComponents.FlightBookingPageObjects.bookNewFlight(FlightBookingPageObjects.java:42)
-	at LogInComponents.FlightBookingPageObjects.enterBoarding(FlightBookingPageObjects.java:46)
-	at LogInComponents.CustomerLoginPageObjects.bookFlight(CustomerLoginPageObjects.java:44)
-	at Selenium_Demo.Travels_WebApp.MainTest.mainTest(MainTest.java:21)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at LogInComponents.TourBooking.formFillup(TourBooking.java:81)
+	at LogInComponents.TourBooking.bookNewTour(TourBooking.java:67)
+	at LogInComponents.CustomerLoginPageObjects.bookTour(CustomerLoginPageObjects.java:64)
+	at Selenium_Demo.Travels_WebApp.MainTest.mainTest(MainTest.java:30)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -136,16 +136,16 @@ Session ID: 0f7e6053021cc2a340cddb625a1f80ee
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2056566350", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2056566350'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;active_... waves-effect&quot; href=&quot;https://phptravels.net/flights&quot; title=&quot;flights&quot;&gt;flights&lt;/a&gt; is not clickable at point (956, 35). Other element would receive the click: &lt;div class=&quot;preloader centerrotate&quot; id=&quot;preloader&quot; style=&quot;opacity: 0.984292;&quot;&gt;...&lt;/div&gt;
+</pre></div><a href='#' onClick='toggleBox("stack-trace1213419524", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1213419524'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1075, 1307)
   (Session info: chrome=110.0.5481.177)
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;1.8.0_351&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f7e6053021cc2a340cddb625a1f80ee, clickElement {id=46b011f8-a31e-4e31-a1dd-b097cbd79fd9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/2p/nch_m4jn7px...}, goog:chromeOptions: {debuggerAddress: localhost:64085}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64085/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on MAC (0f7e6053021cc2a340cddb625a1f80ee)] -&gt; xpath: //a[text() = &apos;flights&apos;]]
-Session ID: 0f7e6053021cc2a340cddb625a1f80ee
+Command: [1df10a8022f9b6888a662edd737e0278, clickElement {id=65d72029-f354-4fca-8da5-e90629a7cc3f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/2p/nch_m4jn7px...}, goog:chromeOptions: {debuggerAddress: localhost:51035}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51035/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (1df10a8022f9b6888a662edd737e0278)] -&gt; xpath: (//label[@for=&apos;agreechb&apos;])[1]]
+Session ID: 1df10a8022f9b6888a662edd737e0278
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -164,11 +164,11 @@ Session ID: 0f7e6053021cc2a340cddb625a1f80ee
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at LogInComponents.FlightBookingPageObjects.bookNewFlight(FlightBookingPageObjects.java:42)
-	at LogInComponents.FlightBookingPageObjects.enterBoarding(FlightBookingPageObjects.java:46)
-	at LogInComponents.CustomerLoginPageObjects.bookFlight(CustomerLoginPageObjects.java:44)
-	at Selenium_Demo.Travels_WebApp.MainTest.mainTest(MainTest.java:21)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at LogInComponents.TourBooking.formFillup(TourBooking.java:81)
+	at LogInComponents.TourBooking.bookNewTour(TourBooking.java:67)
+	at LogInComponents.CustomerLoginPageObjects.bookTour(CustomerLoginPageObjects.java:64)
+	at Selenium_Demo.Travels_WebApp.MainTest.mainTest(MainTest.java:30)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -198,8 +198,8 @@ Session ID: 0f7e6053021cc2a340cddb625a1f80ee
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>6</td>
-<td>Selenium_Demo.Travels_WebApp.MainTest@b7dd107</td></tr>
+<td>38</td>
+<td>Selenium_Demo.Travels_WebApp.MainTest@cb0ed20</td></tr>
 </table><p>
 </body>
 </html>

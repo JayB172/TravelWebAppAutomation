@@ -9,34 +9,30 @@ import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
 import LogInComponents.CustomerLoginPageObjects;
-import MainPageObjects.AccountPageObjects;
 import MainPageObjects.Header;
 
-
-public class MainTest extends BaseTest{
+public class NegativeTest extends BaseTest {
 	
-	
-	
-	
-	@Test(dataProvider = "getCorrectData")
-	public void mainTest(HashMap<String , String> input) {
+	@Test(dataProvider = "getWrongData")
+	public void unsucssessfulLogin(HashMap<String , String> input) {
 		
 		Header header = new Header(driver);
 		//AccountPageObjects createAcc = new AccountPageObjects(driver);
 		CustomerLoginPageObjects loginPage = new CustomerLoginPageObjects(driver);
 		header.selectCustomerLogin();
-		loginPage.closeCookie();
-		loginPage.successfulLogin(input.get("email") , input.get("password"));
-		loginPage.bookTour();
+		loginPage.invalidCredentials(input.get("email") , input.get("password"));
 	}
 	
-	
+	@Test()
+	public void failedTest() {
+		CustomerLoginPageObjects loginPage = new CustomerLoginPageObjects(driver);
+		loginPage.bookFlight();
+	}
 	
 	@DataProvider
-	public Object[][] getCorrectData() throws IOException{
+	public Object[][] getWrongData() throws IOException{
 		List<HashMap<String , String>> data = getJsonDataToMap("/Users/automation-mac/Selenium-workspace/Travels-WebApp/src/test/java/Data/Data.json");
-		return new Object[][] {{data.get(1)}};
+		return new Object[][] {{data.get(0)}};
 	}
 
 }
-

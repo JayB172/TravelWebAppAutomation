@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <listeners>
     <listener class-name="TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Test2(failed)" parallel="tests">
+    <classes>
+      <class name="Selenium_Demo.Travels_WebApp.NegativeTest">
+        <methods>
+          <include name="unsucssessfulLogin"/>
+          <include name="launchApplication"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- Selenium_Demo.Travels_WebApp.NegativeTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="5" name="Test1(failed)" parallel="tests">
     <classes>
       <class name="Selenium_Demo.Travels_WebApp.MainTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="mainTest"/>
+          <include name="logout"/>
+          <include name="mainTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- Selenium_Demo.Travels_WebApp.MainTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

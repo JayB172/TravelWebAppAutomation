@@ -1,5 +1,4 @@
 package LogInComponents;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +29,12 @@ public class CustomerLoginPageObjects extends AbstractComponents {
 	@FindBy(css = "button[type$='submit']")
 	WebElement loginBtn;
 	
+	@FindBy(css = "div.failed")
+	WebElement errorMsg;
+	
+	@FindBy(xpath = "//button[@id='cookie_stop']")
+	WebElement cookiePopup;
+	
 	
 	
 	public void successfulLogin(String email , String passwd) {
@@ -39,10 +44,28 @@ public class CustomerLoginPageObjects extends AbstractComponents {
 		loginBtn.click();
 	}
 	
+	public void invalidCredentials(String email , String passwd) {
+		waitForWebElement(Email);
+		Email.sendKeys(email);
+		Password.sendKeys(passwd);
+		loginBtn.click();
+		waitForWebElement(errorMsg);
+		System.out.println(errorMsg.getText());
+	}
+	
 	public void bookFlight() {
 		FlightBookingPageObjects BookAFlight = new FlightBookingPageObjects(driver);
-		BookAFlight.enterBoarding();
+		BookAFlight.bookNewFlight();
 		
+	}
+	
+	public void bookTour() {
+		TourBooking bookTour = new TourBooking(driver);
+		bookTour.bookNewTour();
+	}
+	
+	public void closeCookie() {
+		cookiePopup.click();
 	}
 	
 
